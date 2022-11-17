@@ -1,7 +1,6 @@
-import 'package:counter_7/main.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/tambahbudget.dart';
 import 'package:counter_7/budget.dart';
+import 'package:counter_7/MyDrawer.dart';
 
 class MyDataBudgetPage extends StatefulWidget {
   const MyDataBudgetPage({super.key});
@@ -18,45 +17,7 @@ class _MyDataBudgetPageState extends State<MyDataBudgetPage> {
         appBar: AppBar(
           title: const Text('Data Budget'),
         ),
-        drawer: Drawer(
-          child: Column(
-            children: [
-              // Menambahkan clickable menu
-              ListTile(
-                title: const Text('counter_7'),
-                onTap: () {
-                  // Route menu ke halaman utama
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyHomePage()),
-                  );
-                },
-              ),
-              ListTile(
-                title: const Text('Tambah Budget'),
-                onTap: () {
-                  // Route menu ke halaman form
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MyTambahBudget()),
-                  );
-                },
-              ),
-              ListTile(
-                title: const Text('Data Budget'),
-                onTap: () {
-                  // Route menu ke halaman form
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MyDataBudgetPage()),
-                  );
-                },
-              ),
-            ],
-          ),
-        ),
+        drawer: const MyDrawer(),
         body: Container(
           alignment: Alignment.center,
           child: ListView.builder(
@@ -66,7 +27,7 @@ class _MyDataBudgetPageState extends State<MyDataBudgetPage> {
                 return Card(
                     child: Container(
                   alignment: Alignment.center,
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

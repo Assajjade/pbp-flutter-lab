@@ -1,8 +1,7 @@
-import 'package:counter_7/main.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/databudget.dart';
 import 'package:flutter/services.dart';
 import 'package:counter_7/budget.dart';
+import 'package:counter_7/MyDrawer.dart';
 
 class MyTambahBudget extends StatefulWidget {
   const MyTambahBudget({super.key});
@@ -25,45 +24,7 @@ class _MyTambahBudgetState extends State<MyTambahBudget> {
       appBar: AppBar(
         title: const Text('Tambah Budget'),
       ),
-      drawer: Drawer(
-        child: Column(
-          children: [
-            // Menambahkan clickable menu
-            ListTile(
-              title: const Text('counter_7'),
-              onTap: () {
-                // Route menu ke halaman utama
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyHomePage()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Tambah Budget'),
-              onTap: () {
-                // Route menu ke halaman form
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const MyTambahBudget()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Data Budget'),
-              onTap: () {
-                // Route menu ke halaman form
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const MyDataBudgetPage()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: const MyDrawer(),
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(
