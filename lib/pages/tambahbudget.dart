@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:counter_7/budget.dart';
-import 'package:counter_7/MyDrawer.dart';
+import 'package:counter_7/model/budget.dart';
+import 'package:counter_7/pages/MyDrawer.dart';
 
 class MyTambahBudget extends StatefulWidget {
   const MyTambahBudget({super.key});
