@@ -43,7 +43,7 @@ class _MyWatchlistPageState extends State<MyWatchlistPage> {
     // TODO: implement
     return Scaffold(
         appBar: AppBar(
-          title: const Text('To Do'),
+          title: const Text('My Watchlist'),
         ),
         drawer: const MyDrawer(),
         body: FutureBuilder(
