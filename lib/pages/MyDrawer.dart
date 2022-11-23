@@ -1,7 +1,9 @@
 import 'package:counter_7/main.dart';
+import 'package:counter_7/model/mywatchlist.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/pages/tambahbudget.dart';
 import 'package:counter_7/pages/databudget.dart';
+import 'package:counter_7/pages/MyWatchlistPage.dart';
 
 // Refactor
 class MyDrawer extends StatelessWidget {
@@ -41,6 +43,17 @@ class MyDrawer extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const MyDataBudgetPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('My Watchlist'),
+            onTap: () {
+              // Route menu ke halaman to do
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyWatchlistPage()),
               );
             },
           ),
